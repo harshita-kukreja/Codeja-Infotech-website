@@ -537,6 +537,10 @@
   .service-detail-text .btn-primary { margin-top:8px; }
 
   /* ===== CONTACT ===== */
+  .form-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
   .contact-section {
   padding: 80px 24px;
 }
@@ -1449,24 +1453,30 @@
   function handleFormSubmit(e) {
   e.preventDefault();
 
-  const form = document.getElementById('contactForm');
+  const form = document.getElementById("contactForm");
+  const button = form.querySelector(".form-submit");
+
+  // change button state
+  button.disabled = true;
+  button.innerText = "Sending...";
 
   emailjs.sendForm(
     "service_o5d4fo8",
     "template_wl8id3c",
-    form
-  ).then(function() {
-
-    form.style.display = 'none';
-    document.getElementById('contactFormSuccess').style.display = 'block';
-    showToast();
-
-  }, function(error) {
-
-    alert("Failed to send message. Please try again.");
-    console.log(error);
-
-  });
+    form,
+    "IU3kuA_dqfHDIvWts"
+  ).then(
+    function () {
+      button.innerText = "Message Sent ✓";
+      form.reset();
+    },
+    function (error) {
+      button.disabled = false;
+      button.innerText = "Send Message →";
+      alert("Something went wrong. Please try again.");
+      console.log(error);
+    }
+  );
 }
 
   function showToast() {

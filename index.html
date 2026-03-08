@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Codeja Infotech – Smart Digital Solutions</title>
+<title>Codeja Infotech - Digital Builders & Solution Finders</title>
 <meta name="description" content="Codeja Infotech helps businesses in Pune and beyond launch powerful websites, ecommerce stores, and digital marketing systems that drive real growth." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -232,11 +232,11 @@
   .hero-badge span { font-size: 0.8rem; color: var(--electric); font-weight: 500; letter-spacing: 0.05em; }
   @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
   .hero-headline {
-    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-size: clamp(2rem, 3.8vw, 3.2rem);
     font-weight: 800;
     color: var(--white);
-    line-height: 1.08;
-    margin-bottom: 24px;
+    line-height: 1.18;
+    margin-bottom: 20px;
     animation: fadeUp 0.7s 0.1s ease both;
   }
   .hero-headline .accent {
@@ -264,7 +264,6 @@
     border-top: 1px solid var(--border);
     animation: fadeUp 0.7s 0.4s ease both;
   }
-  .stat-item {}
   .stat-number {
     font-family: 'Syne', sans-serif;
     font-size: 2rem; font-weight: 800;
@@ -278,37 +277,41 @@
     position: relative; z-index: 2;
     display: flex; justify-content: center; align-items: center;
     animation: fadeUp 0.8s 0.2s ease both;
+    padding: 20px 0;
   }
   .hero-card-stack {
-    position: relative; width: 420px; height: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 380px;
   }
   .hc {
-    position: absolute;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 24px;
+    padding: 22px 24px;
     backdrop-filter: blur(10px);
+    width: 100%;
   }
   .hc-main {
-    width: 340px; left: 40px; top: 40px;
     background: linear-gradient(135deg, #0A1A30 0%, #071428 100%);
-    box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,144,255,0.15);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(0,144,255,0.15);
+    animation: float1 5s ease-in-out infinite;
   }
   .hc-float-1 {
-    width: 180px; right: 0; top: 0;
-    background: rgba(0,144,255,0.1);
+    background: rgba(0,144,255,0.08);
     border-color: rgba(0,144,255,0.2);
-    animation: float1 4s ease-in-out infinite;
+    animation: float2 4s ease-in-out infinite;
   }
   .hc-float-2 {
-    width: 160px; left: 0; bottom: 20px;
-    background: rgba(0,212,255,0.07);
+    background: rgba(0,212,255,0.06);
     border-color: rgba(0,212,255,0.15);
-    animation: float2 5s ease-in-out infinite;
+    animation: float1 6s ease-in-out infinite;
+    display: flex; align-items: center; gap: 16px;
   }
-  @keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-  @keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
+  @keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  @keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
   .hc-title { font-family:'Syne',sans-serif; font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px; }
   .hc-metric { font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:var(--white); }
   .hc-sub { font-size:0.8rem; color:var(--muted); margin-top:4px; }
@@ -534,7 +537,7 @@
   .service-detail-text .btn-primary { margin-top:8px; }
 
   /* ===== CONTACT ===== */
-  .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:48px; align-items:start; }
+  .contact-grid { display:grid; grid-template-columns:40% 60%; gap:48px; align-items:start; }
   .contact-info-card {
     background:var(--card); border:1px solid var(--border); border-radius:20px; padding:40px;
     position:relative; overflow:hidden;
@@ -633,10 +636,7 @@
     .nav-links, .nav-cta { display:none; }
     .hamburger { display:flex; }
     .two-col { grid-template-columns:1fr; gap:40px; }
-    .hero-card-stack { width:320px; height:320px; }
-    .hc-main { width:260px; left:30px; top:30px; }
-    .hc-float-1 { width:140px; }
-    .hc-float-2 { width:130px; }
+    .hero-card-stack { max-width: 100%; }
     .services-grid { grid-template-columns:1fr; }
     .why-grid { grid-template-columns:1fr; }
     .contact-grid { grid-template-columns:1fr; }
@@ -698,40 +698,18 @@
             <span>Pune, India · Digital Solutions</span>
           </div>
           <h1 class="hero-headline">
-            Smart Digital<br/>Solutions for<br/><span class="accent">Modern Business</span>
+            Smart Digital Solutions<br/>for <span class="accent">Modern Business</span>
           </h1>
           <p class="hero-sub">Codeja Infotech helps businesses launch powerful websites, ecommerce stores, and digital marketing systems that drive real growth.</p>
           <div class="hero-buttons">
             <a class="btn-primary" onclick="showPage('contact');showQuoteForm()">Get a Free Quote →</a>
             <a class="btn-outline" onclick="showPage('services')">Explore Services</a>
           </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Projects Delivered</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">5★</div>
-              <div class="stat-label">Client Satisfaction</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">5</div>
-              <div class="stat-label">Core Services</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">3x</div>
-              <div class="stat-label">Avg. Growth for Clients</div>
-            </div>
-          </div>
+
         </div>
         <div class="hero-visual">
           <div class="hero-card-stack">
-            <div class="hc hc-float-1">
-              <div class="hc-title">Satisfaction</div>
-              <div class="hc-stat-num">98%</div>
-              <div class="hc-stat-lbl">Client rate</div>
-              <div class="hc-bar"><div class="hc-bar-fill" style="width:98%"></div></div>
-            </div>
+            <!-- Main services card -->
             <div class="hc hc-main">
               <div class="hc-title">Our Services</div>
               <div class="hc-services">
@@ -741,13 +719,19 @@
                 <div class="hc-svc"><div class="hc-dot"></div>Custom Web & Apps</div>
                 <div class="hc-svc"><div class="hc-dot"></div>Digital Marketing</div>
               </div>
-              <div class="hc-bar" style="margin-top:20px"><div class="hc-bar-fill"></div></div>
-              <div style="font-size:0.72rem;color:var(--muted);margin-top:8px;">Delivering excellence since Day 1</div>
             </div>
-            <div class="hc hc-float-2">
-              <div class="hc-icon">🚀</div>
-              <div class="hc-stat-num">Fast</div>
-              <div class="hc-stat-lbl">Delivery guaranteed</div>
+            <!-- Two side-by-side info cards -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+              <div class="hc hc-float-1">
+                <div style="font-size:1.4rem;margin-bottom:8px;">🎯</div>
+                <div class="hc-stat-num" style="font-size:1rem;">Client-First</div>
+                <div class="hc-stat-lbl">Your goals, our mission</div>
+              </div>
+              <div class="hc hc-float-2" style="flex-direction:column;align-items:flex-start;">
+                <div style="font-size:1.4rem;margin-bottom:8px;">🚀</div>
+                <div class="hc-stat-num" style="font-size:1rem;">Fast</div>
+                <div class="hc-stat-lbl">Delivery guaranteed</div>
+              </div>
             </div>
           </div>
         </div>
@@ -766,7 +750,6 @@
       <div class="marquee-item"><span class="dot"></span>Facebook Ads</div>
       <div class="marquee-item"><span class="dot"></span>Google Ads</div>
       <div class="marquee-item"><span class="dot"></span>Ecommerce Solutions</div>
-      <div class="marquee-item"><span class="dot"></span>UI/UX Design</div>
       <div class="marquee-item"><span class="dot"></span>Lead Generation</div>
       <!-- duplicate for seamless loop -->
       <div class="marquee-item"><span class="dot"></span>Website Development</div>
@@ -777,7 +760,6 @@
       <div class="marquee-item"><span class="dot"></span>Facebook Ads</div>
       <div class="marquee-item"><span class="dot"></span>Google Ads</div>
       <div class="marquee-item"><span class="dot"></span>Ecommerce Solutions</div>
-      <div class="marquee-item"><span class="dot"></span>UI/UX Design</div>
       <div class="marquee-item"><span class="dot"></span>Lead Generation</div>
     </div>
   </div>
@@ -884,40 +866,36 @@
           </div>
         </div>
         <div class="why-visual">
-          <div class="tag" style="margin-bottom:28px;">Our Impact</div>
-          <div style="display:flex;flex-direction:column;gap:20px;">
-            <div>
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                <span style="font-size:0.85rem;color:var(--off-white);">Client Retention</span>
-                <span style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);">95%</span>
+          <div class="tag" style="margin-bottom:28px;">What We Stand For</div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px;background:rgba(0,144,255,0.05);border:1px solid var(--border);border-radius:10px;">
+              <div style="font-size:1.3rem;">⚡</div>
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);font-size:0.95rem;margin-bottom:4px;">Speed Without Compromise</div>
+                <div style="font-size:0.82rem;color:var(--muted);">We deliver fast without cutting corners on quality, design, or performance.</div>
               </div>
-              <div class="hc-bar"><div class="hc-bar-fill" style="width:95%;animation-delay:0s"></div></div>
             </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                <span style="font-size:0.85rem;color:var(--off-white);">On-Time Delivery</span>
-                <span style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);">92%</span>
+            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px;background:rgba(0,144,255,0.05);border:1px solid var(--border);border-radius:10px;">
+              <div style="font-size:1.3rem;">🔍</div>
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);font-size:0.95rem;margin-bottom:4px;">Transparent Process</div>
+                <div style="font-size:0.82rem;color:var(--muted);">Regular updates, clear timelines, no surprises. You're always in the loop.</div>
               </div>
-              <div class="hc-bar"><div class="hc-bar-fill" style="width:92%;animation-delay:0.2s"></div></div>
             </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                <span style="font-size:0.85rem;color:var(--off-white);">Client Satisfaction</span>
-                <span style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);">98%</span>
+            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px;background:rgba(0,144,255,0.05);border:1px solid var(--border);border-radius:10px;">
+              <div style="font-size:1.3rem;">💎</div>
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);font-size:0.95rem;margin-bottom:4px;">Premium Quality</div>
+                <div style="font-size:0.82rem;color:var(--muted);">Every project is built with care, precision, and an eye for detail that sets you apart.</div>
               </div>
-              <div class="hc-bar"><div class="hc-bar-fill" style="width:98%;animation-delay:0.4s"></div></div>
             </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                <span style="font-size:0.85rem;color:var(--off-white);">Performance Score (avg)</span>
-                <span style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);">90+</span>
+            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px;background:rgba(0,144,255,0.05);border:1px solid var(--border);border-radius:10px;">
+              <div style="font-size:1.3rem;">🤝</div>
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);font-size:0.95rem;margin-bottom:4px;">Long-Term Partnership</div>
+                <div style="font-size:0.82rem;color:var(--muted);">We're not just vendors — we're invested in your growth well beyond launch day.</div>
               </div>
-              <div class="hc-bar"><div class="hc-bar-fill" style="width:90%;animation-delay:0.6s"></div></div>
             </div>
-          </div>
-          <div style="margin-top:32px;padding:24px;background:rgba(0,144,255,0.06);border:1px solid rgba(0,144,255,0.15);border-radius:12px;">
-            <div style="font-size:2rem;font-weight:800;font-family:'Syne',sans-serif;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">50+</div>
-            <div style="font-size:0.85rem;color:var(--muted);margin-top:4px;">Projects successfully delivered across industries in India and globally</div>
           </div>
         </div>
       </div>
@@ -992,22 +970,21 @@
             <p style="color:var(--muted);line-height:1.8;">Today, we're a passionate team of designers, developers, and digital marketers based in Pune — delivering world-class digital solutions that drive measurable results. From your first website to a fully automated marketing funnel, we're with you at every step.</p>
           </div>
           <div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-              <div style="background:rgba(0,144,255,0.06);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;">
-                <div style="font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">50+</div>
-                <div style="font-size:0.8rem;color:var(--muted);margin-top:4px;">Projects Delivered</div>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <div style="background:rgba(0,144,255,0.06);border:1px solid var(--border);border-radius:14px;padding:24px;">
+                <div style="font-size:1.5rem;margin-bottom:10px;">🌏</div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);font-size:1rem;margin-bottom:6px;">Serving Businesses Across India</div>
+                <div style="font-size:0.82rem;color:var(--muted);">From Pune and beyond — we work with startups, ecommerce brands, and businesses looking to make their mark online.</div>
               </div>
-              <div style="background:rgba(0,144,255,0.06);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;">
-                <div style="font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">5★</div>
-                <div style="font-size:0.8rem;color:var(--muted);margin-top:4px;">Average Rating</div>
+              <div style="background:rgba(0,144,255,0.06);border:1px solid var(--border);border-radius:14px;padding:24px;">
+                <div style="font-size:1.5rem;margin-bottom:10px;">🛠️</div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);font-size:1rem;margin-bottom:6px;">Full-Stack Digital Expertise</div>
+                <div style="font-size:0.82rem;color:var(--muted);">Design, development, ecommerce, and marketing — all under one roof so you never have to juggle multiple agencies.</div>
               </div>
-              <div style="background:rgba(0,144,255,0.06);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;">
-                <div style="font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">3x</div>
-                <div style="font-size:0.8rem;color:var(--muted);margin-top:4px;">Avg. Client Growth</div>
-              </div>
-              <div style="background:rgba(0,144,255,0.06);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;">
-                <div style="font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Pune</div>
-                <div style="font-size:0.8rem;color:var(--muted);margin-top:4px;">Based in India</div>
+              <div style="background:rgba(0,144,255,0.06);border:1px solid var(--border);border-radius:14px;padding:24px;">
+                <div style="font-size:1.5rem;margin-bottom:10px;">📍</div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--white);font-size:1rem;margin-bottom:6px;">Proudly Based in Pune</div>
+                <div style="font-size:0.82rem;color:var(--muted);">A local team with a global mindset — building digital products that compete on the world stage.</div>
               </div>
             </div>
           </div>
@@ -1104,7 +1081,6 @@
           <div class="sdv-icon">🌐</div>
           <div class="sdv-title">Website Development</div>
           <div class="sdv-features">
-            <div class="sdv-feature"><div class="sdv-check">✓</div>Custom UI/UX Design</div>
             <div class="sdv-feature"><div class="sdv-check">✓</div>Responsive & Mobile-First</div>
             <div class="sdv-feature"><div class="sdv-check">✓</div>SEO-Optimised Structure</div>
             <div class="sdv-feature"><div class="sdv-check">✓</div>Fast Loading & Performance</div>
@@ -1227,33 +1203,45 @@
         <h1 class="section-title">Let's Start a Conversation</h1>
         <p class="section-sub">Have a project in mind? Ready to grow your business? We'd love to hear from you.</p>
       </div>
+
       <div class="contact-grid">
         <div>
           <div class="contact-info-card">
             <h3>Get in Touch</h3>
             <p>Reach out through any of these channels and we'll get back to you within 24 hours.</p>
+
             <div class="contact-items">
+
               <div class="contact-item">
                 <div class="ci-icon">📧</div>
                 <div>
                   <div class="ci-label">General Support</div>
-                  <div class="ci-value"><a href="mailto:kanishk@codejainfotech.com">support@codejainfotech.com</a></div>
+                  <div class="ci-value">
+                    <a href="mailto:support@codejainfotech.com">support@codejainfotech.com</a>
+                  </div>
                 </div>
               </div>
+
               <div class="contact-item">
                 <div class="ci-icon">💼</div>
                 <div>
                   <div class="ci-label">Sales & Projects</div>
-                  <div class="ci-value"><a href="mailto:harshita@codejainfotech.com">sales@codejainfotech.com</a></div>
+                  <div class="ci-value">
+                    <a href="mailto:sales@codejainfotech.com">sales@codejainfotech.com</a>
+                  </div>
                 </div>
               </div>
+
               <div class="contact-item">
                 <div class="ci-icon">👋</div>
                 <div>
                   <div class="ci-label">Say Hello</div>
-                  <div class="ci-value"><a href="mailto:hello@codejainfotech.com">hello@codejainfotech.com</a></div>
+                  <div class="ci-value">
+                    <a href="mailto:hello@codejainfotech.com">hello@codejainfotech.com</a>
+                  </div>
                 </div>
               </div>
+
               <div class="contact-item">
                 <div class="ci-icon">📍</div>
                 <div>
@@ -1261,6 +1249,7 @@
                   <div class="ci-value">Pune, Maharashtra, India</div>
                 </div>
               </div>
+
               <div class="contact-item">
                 <div class="ci-icon">📞</div>
                 <div>
@@ -1268,6 +1257,7 @@
                   <div class="ci-value" style="color:var(--muted);">Coming Soon</div>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -1291,57 +1281,63 @@
         </div>
 
         <div class="form-card" id="contactFormCard">
-          <h3>Send Us a Message</h3>
-          <div id="contactFormSuccess" class="form-success">
-            <div style="font-size:2.5rem;margin-bottom:12px;">🎉</div>
-            <div>Message sent successfully!</div>
-            <div style="font-size:0.85rem;color:var(--muted);margin-top:8px;font-weight:400;">We'll get back to you within 24 hours.</div>
-          </div>
-          <form id="contactForm" onsubmit="handleFormSubmit(event)">
-  <div class="form-row">
-    <div class="form-group">
-      <label>Your Name *</label>
-      <input id="name" type="text" placeholder="John Doe" required />
-    </div>
-    <div class="form-group">
-      <label>Email Address *</label>
-      <input id="email" type="email" placeholder="john@company.com" required />
+  <h3>Send Us a Message</h3>
+
+  <div id="contactFormSuccess" class="form-success">
+    <div style="font-size:2.5rem;margin-bottom:12px;">🎉</div>
+    <div>Message sent successfully!</div>
+    <div style="font-size:0.85rem;color:var(--muted);margin-top:8px;font-weight:400;">
+      We'll get back to you within 24 hours.
     </div>
   </div>
 
-  <div class="form-group">
-    <label>Company Name</label>
-    <input id="company" type="text" placeholder="Your Company" />
-  </div>
+  <form id="contactForm" onsubmit="handleFormSubmit(event)">
 
-  <div class="form-group">
-    <label>Service Needed *</label>
-    <select required id="service">
-      <option value="" disabled selected>Select a service...</option>
-      <option>Website Development</option>
-      <option>Shopify Store Development</option>
-      <option>Virtual Product Photoshoots</option>
-      <option>Custom Web & App Development</option>
-      <option>Digital Marketing</option>
-      <option>Multiple Services</option>
-      <option>Not Sure Yet</option>
-    </select>
-  </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your Name *</label>
+        <input type="text" name="user_name" placeholder="John Doe" required />
+      </div>
 
-  <div class="form-group">
-    <label>Message *</label>
-    <textarea id="message" placeholder="Tell us about your project..." required></textarea>
-  </div>
-
-  <button type="submit" class="btn-primary form-submit">
-    Send Message →
-  </button>
-</form>
-        </div>
+      <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" name="user_email" placeholder="john@company.com" required />
       </div>
     </div>
-  </section>
-</div><!-- /page-contact -->
+
+    <div class="form-group">
+      <label>Company Name</label>
+      <input type="text" name="company" placeholder="Your Company" />
+    </div>
+
+    <div class="form-group">
+      <label>Service Needed *</label>
+      <select required name="service" id="serviceSelect">
+        <option value="" disabled selected>Select a service...</option>
+        <option>Website Development</option>
+        <option>Shopify Store Development</option>
+        <option>Virtual Product Photoshoots</option>
+        <option>Custom Web & App Development</option>
+        <option>Digital Marketing</option>
+        <option>Multiple Services</option>
+        <option>Not Sure Yet</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Message *</label>
+      <textarea 
+        name="message"
+        placeholder="Tell us about your project, goals, budget, or anything else that would help us understand your needs..."
+        required></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary form-submit">
+      Send Message →
+    </button>
+
+  </form>
+</div>
 
 
 <!-- ======= FOOTER ======= -->
@@ -1401,110 +1397,97 @@
   <div class="toast-icon">✅</div>
   <div class="toast-text">Message sent! We'll be in touch soon.</div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script>
+  (function(){
+    emailjs.init("IU3kuA_dqfHDIvWts");
+  })();
 
-// Initialize EmailJS
-(function(){
-  emailjs.init("IU3kuA_dqfHDIvWts");
-})();
+  // PAGE NAVIGATION
+  function showPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    const navEl = document.getElementById('nav-' + page);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-// PAGE NAVIGATION
-function showPage(page) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + page).classList.add('active');
-  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const navEl = document.getElementById('nav-' + page);
-  if (navEl) navEl.classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
 
-// HAMBURGER MENU
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
+  function showQuoteForm() {
+    setTimeout(() => {
+      const form = document.getElementById('contactFormCard');
+      if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 150);
+  }
 
-// QUOTE FORM — pre-select if from CTA
-function showQuoteForm() {
-  setTimeout(() => {
-    const form = document.getElementById('contactFormCard');
-    if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 100);
-}
-
-// FORM SUBMIT (UPDATED)
-function handleFormSubmit(e) {
+  function handleFormSubmit(e) {
   e.preventDefault();
 
-  const params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    company: document.getElementById("company").value,
-    service: document.getElementById("service").value,
-    message: document.getElementById("message").value
-  };
+  const form = document.getElementById('contactForm');
 
-  emailjs.send(
+  emailjs.sendForm(
     "service_o5d4fo8",
     "template_wl8id3c",
-    params
-  ).then(function(){
+    form
+  ).then(function() {
 
-    document.getElementById('contactForm').style.display = 'none';
+    form.style.display = 'none';
     document.getElementById('contactFormSuccess').style.display = 'block';
-
     showToast();
 
-  }).catch(function(error){
+  }, function(error) {
+
     alert("Failed to send message. Please try again.");
-    console.error(error);
+    console.log(error);
+
   });
 }
 
-// TOAST
-function showToast() {
-  const t = document.getElementById('toast');
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 4000);
-}
+  function showToast() {
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 4000);
+  }
 
-// SCROLL ANIMATIONS
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .why-item, .process-step, .value-card, .team-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 20) {
+      nav.style.background = 'rgba(4,12,28,0.97)';
+    } else {
+      nav.style.background = 'rgba(4,12,28,0.85)';
     }
   });
-}, { threshold: 0.1 });
 
-document.querySelectorAll('.service-card, .why-item, .process-step, .value-card, .team-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
-
-// NAVBAR SCROLL EFFECT
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('navbar');
-  if (window.scrollY > 20) {
-    nav.style.background = 'rgba(4,12,28,0.97)';
-  } else {
-    nav.style.background = 'rgba(4,12,28,0.85)';
-  }
-});
-
-// Close mobile menu on outside click
-document.addEventListener('click', (e) => {
-  const menu = document.getElementById('mobileMenu');
-  const hamburger = document.querySelector('.hamburger');
-  if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
-    menu.classList.remove('open');
-  }
-});
-
+  document.addEventListener('click', (e) => {
+    const menu = document.getElementById('mobileMenu');
+    const hamburger = document.querySelector('.hamburger');
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+  
 </script>
 </body>
 </html>
